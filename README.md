@@ -4,9 +4,9 @@ Repository for the UAS Machine Learning individual task: **Hands-On End-to-End M
 
 ## Student Identity
 
-- Name: `<your name>`
-- Class: `<your class>`
-- NIM: `<your NIM>`
+- Name: `Ridho Anugrah Mulyadi`
+- Class: `<TK-47-05>`
+- NIM: `<101032300028>`
 
 ## Project Overview
 
