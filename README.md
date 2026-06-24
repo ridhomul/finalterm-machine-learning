@@ -96,17 +96,15 @@ The notebooks use `QUICK_RUN = True` by default so they can run faster on a lapt
 
 ## Results Summary
 
-Run both notebooks to generate final values. The expected result tables are:
+The latest local run produced the following model comparison. Full tables are available in `reports/results_summary.md`.
 
-| Task | Model | Main Metrics |
-|---|---|---|
-| Regression | Baseline MLP | MAE, RMSE, R2 |
-| Regression | Deep MLP | MAE, RMSE, R2 |
-| Regression | Optuna Residual MLP | MAE, RMSE, R2 |
-| Fraud Classification | Baseline MLP | ROC-AUC, PR-AUC, F1 |
-| Fraud Classification | Deep MLP | ROC-AUC, PR-AUC, F1 |
-| Fraud Classification | Optuna Residual MLP | ROC-AUC, PR-AUC, F1 |
+| Task | Best Model | Main Result | Interpretation |
+|---|---|---|---|
+| Regression | Deep MLP | RMSE `8.4448`, MAE `5.9307`, R2 `0.3710` | Best overall regression model by RMSE and R2. |
+| Fraud Classification | Deep MLP | PR-AUC `0.4710`, ROC-AUC `0.8938`, F1 `0.4844` | Best fraud model, especially on PR-AUC, recall, and F1. |
 
-## Conclusion Template
+For regression, the Deep MLP outperformed the baseline and Optuna residual model on RMSE and R2, although the Optuna model had the lowest MAE. For fraud detection, the Deep MLP achieved the strongest overall performance across PR-AUC, ROC-AUC, accuracy, precision, recall, F1, and validation loss.
 
-After running the notebooks, compare the baseline architecture against deeper and tuned architectures. Discuss whether Optuna improved validation performance, whether the residual architecture helped optimization, and how class imbalance affected fraud detection metrics such as recall and PR-AUC.
+## Conclusion
+
+The deeper fixed MLP architecture performed best across both tasks in the current experiments. Optuna helped explore hyperparameters and improved some metrics compared with the baseline, but the tuned residual model did not outperform the Deep MLP overall. For fraud detection, PR-AUC, recall, and F1 are prioritized over accuracy because the dataset is highly imbalanced.
