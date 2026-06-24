@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Experiment outputs
+mlruns/
+mlflow.db
+mlflow.db-shm
+mlflow.db-wal
+*.sqlite
+*.sqlite3
+models/*.pt
+models/*.pth
+models/*.pkl
+models/*.joblib
+artifacts/*.png
+artifacts/*.jpg
+artifacts/*.jpeg
+artifacts/*.pdf
+artifacts/*.csv
+artifacts/*.json
+
+# Large local datasets
+midterm-regresi-dataset.csv
+train_transaction.csv
+
+# Local/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+tools/
+agents.md
