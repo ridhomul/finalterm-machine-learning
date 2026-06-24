@@ -78,6 +78,10 @@ mlflow ui --backend-store-uri sqlite:///mlflow.db
 
 Then open the local URL shown by MLflow, usually `http://127.0.0.1:5000`. Tracking metadata is stored in `mlflow.db`; run artifacts are stored under `mlruns/`.
 
+MLflow experiment tracking interface:
+
+![MLflow UI showing regression and fraud experiments](reports/mlflow_ui_home.png)
+
 ## Dataset Notes
 
 The CSV files are large. GitHub normally rejects files over 100 MB, so this repository includes `.gitattributes` for Git LFS tracking of CSV files. If Git LFS is not available, keep the datasets locally in the project root with these exact filenames:
